@@ -1,0 +1,10 @@
+version: 4.1.29
+steps:
+  - prompt: >-
+      Locate the filter options  # Use the content of the file from the
+      environment
+    commands:
+      - command: hover-text
+        text: Filters
+        description: filter options button on the Airbnb page
+        action: click
