@@ -1,0 +1,37 @@
+version: 4.1.29
+steps:
+  - prompt: Click on the main search bar.
+    commands:
+      - command: hover-text
+        text: Search destinations
+        description: main search bar in the header
+        action: click
+  - prompt: Assert that the search bar is functional and allows input.
+    commands:
+      - command: hover-text
+        text: Search destinations
+        description: main search bar in the header
+        action: click
+      - command: type
+        text: Test Input
+  - prompt: Input a search term and initiate a search.
+    commands:
+      - command: hover-text
+        text: Where
+        description: main search bar in the header
+        action: click
+      - command: type
+        text: New York
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: >-
+      Assert that search results are displayed correctly.  # Use the content of
+      the file from the environment
+    commands:
+      - command: hover-text
+        text: Guest favorite
+        description: search result listing
+        action: hover
+      - command: assert
+        expect: search results are displayed
