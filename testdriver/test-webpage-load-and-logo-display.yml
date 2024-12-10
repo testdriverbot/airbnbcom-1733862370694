@@ -1,0 +1,18 @@
+version: 4.1.29
+steps:
+  - prompt: Open the webpage in the browser.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+      - command: press-keys
+        keys:
+          - control
+          - l
+      - command: type
+        text: https://www.airbnb.com
+      - command: press-keys
+        keys:
+          - enter
+      - command: assert
+        expect: the Airbnb logo is visible
