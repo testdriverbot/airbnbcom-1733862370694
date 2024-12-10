@@ -1,0 +1,16 @@
+version: 4.1.29
+steps:
+  - prompt: Hover over the navigation menu options.
+    commands:
+      - command: hover-text
+        text: Stays
+        description: navigation menu option for stays
+        action: hover
+      - command: hover-text
+        text: Experiences
+        description: navigation menu option for experiences
+        action: hover
+      - command: hover-text
+        text: Contact Us
+        description: link for contacting support or customer service
+        action: click
